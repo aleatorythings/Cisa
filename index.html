@@ -14,6 +14,12 @@
 	#col1 { width: auto; float: left; }
 	#col2 { width: auto; float: left; margin-left:100px;  }
 	#col3 { width: auto; float: left; margin-left: -200px; margin-top:25px;  }
+	.jumbotron{
+	background-color:#0e0446b0;
+	}
+	.btn-secondary{
+	
+	}
   </style>
   
 </head>
@@ -21,18 +27,15 @@
 <body>
 
 
-<div class="container" style="max-height:auto; max-width: auto; border:solid;">
+<div class="container" style="max-height:auto; max-width: auto; border:solid;border-color:#050219b0">
 <div class="jumbotron text-center" style="margin-top: 10px;height:10px;width: auto">
     
-		<div id="col1">
-			<img src="logoeach.png" style="height: 100px;width: 250px;margin-top: -50px">  
-		</div>
-		<div id="col2">
-			<h3 style="margin-top: -15px">UNIVERSIDADE DE SÃO PAULO</h3>
-			<h5 style="margin-top: -15px">Escola de Artes Ciências e Humanidades</h5>
+		
+		<div id="col2" style="margin-left: 350px">
+			<h3 style="margin-top: -15px;color:white;">Camera Municipal de Poá</h3>
 		</div>
 		<div id="col3">
-			<img src="logo.png" style="height: 170px; margin-right: -650px;margin-left: 150px;margin-top: -105px">
+			<img src="brasao.gif" style="height: 110px; margin-right: -700px;margin-left: 250px;margin-top: -80px">
 		</div>
 	
     
@@ -42,9 +45,16 @@
   <div class="row" style="margin-left: -35px; margin-top: 15px; width: auto">
 
     <div class="col-sm-8" style="max-width: 100%; margin-left: 20px;">
-<div class="btn-group" style="margin-left: 160px">
+<div class="btn-group" style="margin-left: 550px;height:40px;">
+  <button id="documentosNaoPublicados" onclick="change()" class="btn btn-secondary btn-lg" type="button">
+     Documentos não publicados
+  </button>
+  
+</div>
+
+<div class="btn-group" style="margin-left: 20px;height:40px;">
   <button class="btn btn-secondary btn-lg" type="button">
-     <img src="imagem3.png" style="height: 40px; margin-right: 10px;">Documentos não publicados
+     Controles de prazo
   </button>
   <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle Dropdown</span>
@@ -55,47 +65,22 @@
     <a class="dropdown-item" href="#">Action</a>
   </div>
 </div>
-
-<div class="btn-group" style="margin-right: 50px;margin-left: 120px">
-  <button class="btn btn-secondary btn-lg" type="button">
-     <img src="imagem3.png" style="height: 40px; margin-right: 10px;">Controles de prazo
-  </button>
-  <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Something else here</a>
-  	<div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Action</a>
-  </div>
-</div>
-
-    	<hr style="width: auto;"/>
-
-      <iframe width="1100" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=1cf957d7-6c6b-46a2-bde2-59f496ef0390&autoAuth=true&ctid=be013de1-c776-4eb9-a825-61d5d8b9aca2&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLWJyYXppbC1zb3V0aC1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
-
+		<iframe id="main" width="1100" height="541.25" src="https://app.powerbi.com/view?r=eyJrIjoiMWUyYWUyNDQtODhiZC00NjVkLTg0MWYtZjBmNjkzODIxNWU0IiwidCI6IjdlOTNlMjg2LWIyOWEtNDQ1NC1hNDFhLWU4NDE5ZWM5ZGViNSJ9" frameborder="0" allowFullScreen="true"></iframe>
     </div>
 
   </div>
 
       <hr style="width: auto">
-<div class="jumbotron text-center" style="margin-top: 10px;height:10px;width: auto;">
-    
-		<div id="col1">
-			<img src="logoeach.png" style="height: 100px;width: 250px;margin-top: -50px;margin-right:30px;margin-left:20px;">  
-		</div>
-		<div id="col2">
-			<h5 style="margin-top: -15px">São Paulo - SP</h5>
-			<h6 style="margin-top: -15px">Rua Arlindo Béttio, 1000 - Vila Guaraciaba</h6>
-		</div>
-		<div id="col3">
-			<img src="logo.png" style="height: 170px; margin-right: -650px;margin-left: 190px;margin-top: -105px">
-		</div>
-	
-    
-</div>
+
   </div>
 
+  <script>
+  function change() {
+	var el = document.getElementById('main');
+	el.src = "https://app.powerbi.com/view?r=eyJrIjoiNjU1ZDVjZTMtYzk2Yy00M2I3LTk2NDAtMjQwYmZiYjBhNWQ5IiwidCI6IjdlOTNlMjg2LWIyOWEtNDQ1NC1hNDFhLWU4NDE5ZWM5ZGViNSJ9"; // assign url to src property
+  }
+  
+  </script>
 
 </div>
 
